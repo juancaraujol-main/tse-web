@@ -145,7 +145,18 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-938KWH1VZX');
-  </script>
+<script>
+  // Activa debug_mode solo si la URL trae ?debug=1
+  (function () {
+    try {
+      var p = new URLSearchParams(location.search);
+      if (p.get('debug') === '1') {
+        gtag('config', 'G-938KWH1VZX', { debug_mode: true });
+      }
+    } catch (e) {}
+  })();
+</script>
+  
 
   <!-- Eventos GA4 para clics en CTAs -->
   <script>
