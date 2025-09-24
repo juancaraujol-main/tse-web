@@ -138,39 +138,43 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://teamskillevolution.com/img/og-b.jpg">
 
-  <!-- Google tag (gtag.js) — GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-938KWH1VZX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-938KWH1VZX');
+<!-- Google tag (gtag.js) — GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-938KWH1VZX"></script>
 <script>
-  // Activa debug_mode solo si la URL trae ?debug=1
-  (function () {
-    try {
-      var p = new URLSearchParams(location.search);
-      if (p.get('debug') === '1') {
-        gtag('config', 'G-938KWH1VZX', { debug_mode: true });
-      }
-    } catch (e) {}
-  })();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  // Activa debug si la URL trae ?debug=1
+  var TSE_DEBUG = false;
+  try { TSE_DEBUG = new URLSearchParams(location.search).get('debug') === '1'; } catch(e){}
+
+  // Config GA4 (con debug condicional)
+  gtag('config', 'G-938KWH1VZX', { debug_mode: TSE_DEBUG });
+
+  // Eventos GA4 para clics en CTAs (con flag de debug si aplica)
+  document.addEventListener('DOMContentLoaded', function () {
+    function sendCtaEvent(el){
+      if (!window.gtag) return;
+      const label = el.getAttribute('data-cta') || 'cta';
+      const params = { event_category: 'CTA', event_label: label };
+      if (TSE_DEBUG) params.debug_mode = true; // fuerza DebugView
+      gtag('event', 'click', params);
+    }
+    document.querySelectorAll('a[data-cta]').forEach(function(el){
+      el.addEventListener('click', function(){ sendCtaEvent(el); });
+    });
+
+    // Ping de depuración al cargar (solo con ?debug=1)
+    if (TSE_DEBUG) {
+      gtag('event', 'debug_ping', { debug_mode: true });
+    }
+  });
 </script>
+
   
 
-  <!-- Eventos GA4 para clics en CTAs -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function sendCtaEvent(el){
-        if (!window.gtag) return;
-        const label = el.getAttribute('data-cta') || 'cta';
-        gtag('event', 'click', { event_category: 'CTA', event_label: label });
-      }
-      document.querySelectorAll('a[data-cta]').forEach(function(el){
-        el.addEventListener('click', function(){ sendCtaEvent(el); });
-      });
-    });
-  </script>
+       
 
   <style>
     :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --brand:#22d3ee; --accent:#a78bfa;}
