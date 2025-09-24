@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TeamSkill Evolution — Activa tu Estilo de Pensamiento</title>
+  <meta name="description" content="Taller práctico de medio día para activar el estilo de pensamiento de tu equipo y mejorar comunicación y productividad.">
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --brand:#22d3ee; --accent:#a78bfa;}
+    *{box-sizing:border-box} body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:linear-gradient(135deg,#0b1220,#0f172a);color:var(--text)}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    .hero{background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:18px;padding:28px;margin:16px 0}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px}
+    h2{font-size:24px;margin:24px 0 8px}
+    p{line-height:1.5;color:var(--muted)}
+    .cta{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--brand),var(--accent));color:#0b1220;text-decoration:none;font-weight:700}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:16px}
+    .card{background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:16px;padding:18px}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{border-bottom:1px solid #1f2937;padding:10px;text-align:left}
+    .footer{margin:32px 0 8px;font-size:14px;color:#94a3b8}
+    .badge{display:inline-block;font-size:12px;background:#1f2937;border:1px solid #334155;color:#cbd5e1;border-radius:999px;padding:4px 10px;margin-right:8px}
+    .logo{font-weight:900;letter-spacing:.3px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div class="badge">TeamSkill Evolution</div>
+      <h1>Activa tu Estilo de Pensamiento</h1>
+      <p>En <strong>4 horas</strong>, tu equipo descubre sus estilos de pensamiento (modelo Katherine Benziger) y aplica prácticas para mejorar <strong>comunicación</strong>, <strong>productividad</strong> y <strong>cohesión</strong>.</p>
+      <a class="cta" href="[https://calendar.app.google/JBTjB4tRCCHTUKrW8ENLACE_CALENDARIO]" target="_blank" rel="noopener">Agenda demo gratuita de 20’</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>¿Qué incluye?</h2>
+        <ul>
+          <li>Diagnóstico de Estilos de Pensamiento (Benziger).</li>
+          <li>Taller práctico de medio día (presencial o virtual).</li>
+          <li>Feedback grupal + plan de acción en 7 días.</li>
+          <li>Material digital y certificado de participación.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Inversión</h2>
+        <table>
+          <thead><tr><th>Paquete</th><th>Capacidad</th><th>Precio</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Mini</strong></td><td>5–10 personas</td><td><strong>US$ 850</strong></td></tr>
+            <tr><td><strong>Estándar</strong></td><td>11–20 personas</td><td><strong>US$ 1.200</strong></td></tr>
+            <tr><td><strong>Full Team</strong></td><td>21–35 personas</td><td><strong>US$ 1.600</strong></td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:8px">Opcionales: Coaching grupal US$ 200/sesión · Streaming +US$ 250 · Bono 3 talleres −10%.</p>
+      </div>
+
+      <div class="card">
+        <h2>Testimonio</h2>
+        <p>“Entendimos cómo pensamos y cómo coordinarnos mejor. Resultado inmediato.”<br>— Cliente corporativo (Leterago)</p>
+      </div>
+
+      <div class="card">
+        <h2>Contacto</h2>
+        <p><strong>Email:</strong> <a href="mailto:admin@teamskillevolution.com">admin@teamskillevolution.com</a><br>
+           <strong>WhatsApp:</strong> +593 [TU_NÚMERO]<br>
+           <strong>LinkedIn:</strong> [TU_PERFIL]</p>
+        <a class="cta" href="[ENLACE_CALENDARIO]" target="_blank" rel="noopener">Reservar demo 20’</a>
+      </div>
+    </div>
+
+    <p class="footer">© <span class="logo">TeamSkill Evolution</span> · Quito, Ecuador · Todos los derechos reservados</p>
+  </div>
+</body>
+</html>

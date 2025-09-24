@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<link rel="icon" type="image/png" sizes="32x32" href="/img/icons/favicon-32.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#0f172a">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "name": "TeamSkill Evolution",
+      "url": "https://teamskillevolution.com/",
+      "logo": "https://teamskillevolution.com/img/icons/icon-512.png",
+      "sameAs": [
+        "https://www.linkedin.com/in/juan-carlos-coaching/"
+      ],
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "contactType": "customer support",
+          "email": "admin@teamskillevolution.com",
+          "telephone": "+593998313427",
+          "availableLanguage": ["es"],
+          "areaServed": "EC"
+        }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "name": "TeamSkill Evolution",
+      "url": "https://teamskillevolution.com/",
+      "inLanguage": "es",
+      "publisher": {
+        "@type": "Organization",
+        "name": "TeamSkill Evolution"
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuánto dura el taller y a quién va dirigido?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "El taller es de medio día (4 horas) y está diseñado para equipos corporativos, líderes de área, HR y mandos medios que quieran mejorar comunicación, productividad y cohesión."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué metodología usamos en TeamSkill Evolution?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Trabajamos sobre el modelo de Estilos de Pensamiento (Benziger) con ejercicios prácticos y un plan de acción aplicable en 7 días. Incluye diagnóstico, sesión guiada y material digital."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Modalidades y cómo agendar una demo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos modalidad presencial y virtual. Puedes agendar una demo gratuita de 20 minutos en https://calendar.app.google/PUckCxjMqDbCTfb26 o escribirnos a admin@teamskillevolution.com."
+      }
+    }
+  ]
+}
+</script>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TeamSkill Evolution — Taller de liderazgo en 4 horas</title>
+
+<meta name="description" content="Activa el estilo de pensamiento (Benziger) de tu equipo y mejora comunicación, productividad y cohesión. Demo gratuita de 20 minutos.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://teamskillevolution.com/">
+
+  <!-- Preload hero image -->
+  <link rel="preload" as="image" href="/img/hero-b.webp" imagesrcset="/img/hero-b.webp" type="image/webp" fetchpriority="high">
+
+  <!-- Open Graph / Twitter -->
+<meta property="og:title" content="TeamSkill Evolution — Taller de liderazgo en 4 horas">
+<meta property="og:description" content="Activa el estilo de pensamiento (Benziger) de tu equipo y mejora comunicación, productividad y cohesión. Demo gratuita de 20 minutos.">
+  <meta property="og:url" content="https://teamskillevolution.com/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://teamskillevolution.com/img/og-b.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://teamskillevolution.com/img/og-b.jpg">
+
+  <!-- Google tag (gtag.js) — GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-938KWH1VZX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-938KWH1VZX');
+  </script>
+
+  <!-- Eventos GA4 para clics en CTAs -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      function sendCtaEvent(el){
+        if (!window.gtag) return;
+        const label = el.getAttribute('data-cta') || 'cta';
+        gtag('event', 'click', { event_category: 'CTA', event_label: label });
+      }
+      document.querySelectorAll('a[data-cta]').forEach(function(el){
+        el.addEventListener('click', function(){ sendCtaEvent(el); });
+      });
+    });
+  </script>
+
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --brand:#22d3ee; --accent:#a78bfa;}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial;background:linear-gradient(135deg,#0b1220,#0f172a);color:var(--text)}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    .hero{background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:18px;padding:28px;margin:16px 0}
+    h1{font-size:clamp(28px,5vw,40px);margin:0 0 8px}
+    h2{font-size:24px;margin:24px 0 8px}
+    p{line-height:1.5;color:var(--muted)}
+    .cta{display:inline-block;margin-top:12px;padding:12px 18px;border-radius:12px;background:linear-gradient(90deg,var(--brand),var(--accent));color:#0b1220;text-decoration:none;font-weight:700}
+    .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:16px}
+    .card{background:rgba(17,24,39,.6);border:1px solid #1f2937;border-radius:16px;padding:18px}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{border-bottom:1px solid #1f2937;padding:10px;text-align:left}
+    .footer{margin:32px 0 8px;font-size:14px;color:#94a3b8}
+    .badge{display:inline-block;font-size:12px;background:#1f2937;border:1px solid #334155;color:#cbd5e1;border-radius:999px;padding:4px 10px;margin-right:8px}
+    .logo{font-weight:900;letter-spacing:.3px}
+.hero-media{margin:0 0 16px}
+.hero-media img{display:block;width:100%;height:auto;border-radius:14px;border:1px solid #1f2937}
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+<figure class="hero-media">
+  <img src="/img/hero-b.webp"
+       alt="TeamSkill Evolution — espiral Fibonacci con cuatro pilares: Estrategia, Visión, Acción y Relaciones"
+       width="1600" height="900"
+       decoding="async" fetchpriority="high">
+</figure>
+    
+  <div class="badge">TeamSkill Evolution</div>
+      <h1>Activa tu Estilo de Pensamiento</h1>
+      <p>En <strong>4 horas</strong>, tu equipo descubre sus estilos de pensamiento (modelo Katherine Benziger) y aplica prácticas para mejorar <strong>comunicación</strong>, <strong>productividad</strong> y <strong>cohesión</strong>.</p>
+      <a class="cta" href="https://calendar.app.google/PUckCxjMqDbCTfb26" target="_blank" rel="noopener" data-cta="agenda-20">Agenda demo gratuita de 20’</a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>¿Qué incluye?</h2>
+        <ul>
+          <li>Diagnóstico de Estilos de Pensamiento (Benziger).</li>
+          <li>Taller práctico de medio día (presencial o virtual).</li>
+          <li>Feedback grupal + plan de acción en 7 días.</li>
+          <li>Material digital y certificado de participación.</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Inversión</h2>
+        <table>
+          <thead><tr><th>Paquete</th><th>Capacidad</th><th>Precio</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Mini</strong></td><td>5–10 personas</td><td><strong>US$ 850</strong></td></tr>
+            <tr><td><strong>Estándar</strong></td><td>11–20 personas</td><td><strong>US$ 1.200</strong></td></tr>
+            <tr><td><strong>Full Team</strong></td><td>21–35 personas</td><td><strong>US$ 1.600</strong></td></tr>
+          </tbody>
+        </table>
+        <p style="margin-top:8px">Opcionales: Coaching grupal US$ 200/sesión · Streaming +US$ 250 · Bono 3 talleres −10%.</p>
+      </div>
+
+      <div class="card">
+        <h2>Testimonio</h2>
+        <p>“Entendimos cómo pensamos y cómo coordinarnos mejor. Resultado inmediato.”<br>— Cliente corporativo (Leterago)</p>
+      </div>
+
+      <div class="card">
+        <h2>Contacto</h2>
+        <p>
+          <strong>Email:</strong> <a href="mailto:admin@teamskillevolution.com">admin@teamskillevolution.com</a><br>
+          <strong>WhatsApp:</strong> <a href="https://wa.me/593998313427" target="_blank" rel="noopener" data-cta="whatsapp">+593 998 313 427</a><br>
+          <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/juan-carlos-coaching/" target="_blank" rel="noopener">linkedin.com/in/juan-carlos-coaching</a>
+        </p>
+        <a class="cta" href="https://calendar.app.google/PUckCxjMqDbCTfb26" target="_blank" rel="noopener" data-cta="reservar-20">Reservar demo 20’</a>
+      </div>
+    </div>
+
+    <p class="footer">© <span class="logo">TeamSkill Evolution</span> · Quito, Ecuador · Todos los derechos reservados</p>
+  </div>
+</body>
+</html>
+
+
+
+
+
