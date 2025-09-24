@@ -3,14 +3,7 @@ name: Deploy to Firebase Hosting (prod)
 on:
   push:
     branches: [ "main" ]
-
-permissions:
-  contents: read
-  id-token: write
-
-concurrency:
-  group: hosting-prod
-  cancel-in-progress: true
+  workflow_dispatch:
 
 jobs:
   deploy:
@@ -19,13 +12,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Auth to Google Cloud
-        uses: google-github-actions/auth@v2
-        with:
-          credentials_json: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
-
       - name: Install Firebase CLI
         run: npm install -g firebase-tools
 
-      - name: Deploy to Firebase Hosting
+      - name: Deploy to Firebase Hosting (tsevolution-prod)
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: firebase deploy --only hosting --project tsevolution-prod
