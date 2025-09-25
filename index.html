@@ -246,9 +246,30 @@
 
   </style>
 </head>
+/* Hero en dos columnas */
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;align-items:center}
+.hero-copy img{max-width:100%}
+.hero-media img{width:100%;height:auto;border-radius:14px;border:1px solid #1f2937;display:block}
+@media (max-width: 768px){.hero-grid{grid-template-columns:1fr}}
+
 <body>
   <div class="wrap">
     <div class="hero">
+  <div class="hero-grid">
+    <div class="hero-copy">
+      <div class="badge">TeamSkill Evolution</div>
+      <h1>Activa tu Estilo de Pensamiento</h1>
+      <p>En <strong>4 horas</strong>, tu equipo descubre sus estilos de pensamiento (modelo Katherine Benziger) y aplica prácticas para mejorar <strong>comunicación</strong>, <strong>productividad</strong> y <strong>cohesión</strong>.</p>
+      <!-- BOTÓN 1 -->
+      <a class="cta" href="https://calendar.app.google/PUckCxjMqDbCTfb26" target="_blank" rel="noopener" data-cta="agenda-20">Agenda demo gratuita de 20’</a>
+    </div>
+    <div class="hero-media">
+      <img src="/img/hero-b.webp"
+           alt="Equipo en taller TSE aplicando el modelo de estilos de pensamiento"
+           width="800" height="450" decoding="async" fetchpriority="high">
+    </div>
+  </div>
+
 <figure class="hero-media">
   <img src="/img/hero-b.webp"
        alt="TeamSkill Evolution — espiral Fibonacci con cuatro pilares: Estrategia, Visión, Acción y Relaciones"
