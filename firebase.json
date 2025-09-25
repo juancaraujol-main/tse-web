@@ -46,6 +46,13 @@
           { "key": "Cache-Control", "value": "public, max-age=604800" }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "source": "/index.html",
+        "destination": "/",
+        "type": 301
+      }
     ]
   }
 }
