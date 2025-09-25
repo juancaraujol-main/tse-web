@@ -9,6 +9,15 @@
     ],
     "headers": [
       {
+        "source": "**",
+        "headers": [
+          { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+          { "key": "X-Content-Type-Options", "value": "nosniff" },
+          { "key": "Permissions-Policy", "value": "interest-cohort=()" },
+          { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+        ]
+      },
+      {
         "source": "/site.webmanifest",
         "headers": [
           { "key": "Content-Type", "value": "application/manifest+json; charset=UTF-8" },
