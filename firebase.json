@@ -14,7 +14,11 @@
           { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
           { "key": "X-Content-Type-Options", "value": "nosniff" },
           { "key": "Permissions-Policy", "value": "interest-cohort=()" },
-          { "key": "X-Frame-Options", "value": "SAMEORIGIN" }
+          { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+          {
+            "key": "Content-Security-Policy-Report-Only",
+            "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://www.googletagmanager.com; img-src 'self' data: https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'self'; upgrade-insecure-requests"
+          }
         ]
       },
       {
@@ -45,3 +49,4 @@
     ]
   }
 }
+
