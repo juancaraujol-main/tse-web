@@ -159,19 +159,31 @@
   </script>
 
   <!-- Eventos GA4 para CTAs (data-cta) -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      function sendCtaEvent(el){
-        if (!window.gtag) return;
-        const label = el.getAttribute('data-cta') || 'cta';
-        gtag('event', 'click', { event_category: 'CTA', event_label: label, debug_mode: !!(window.TSE_DEBUG) });
-      }
-      document.querySelectorAll('a[data-cta]').forEach(function(el){
-        el.addEventListener('click', function(){ sendCtaEvent(el); });
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function sendCtaEvent(el){
+      if (!window.gtag) return;
+      const label = el.getAttribute('data-cta') || 'cta';
+      const href  = el.getAttribute('href') || '';
+
+      // Evento actual para tus reportes
+      gtag('event', 'click', { event_category: 'CTA', event_label: label, debug_mode: !!(window.TSE_DEBUG) });
+
+      // Evento recomendado GA4 (lead)
+      gtag('event', 'generate_lead', {
+        method: 'cta',
+        link_url: href,
+        cta_label: label,
+        debug_mode: !!(window.TSE_DEBUG)
       });
-      if (window.TSE_DEBUG) { gtag('event', 'debug_ping', { debug_mode: true }); }
+    }
+    document.querySelectorAll('a[data-cta]').forEach(function(el){
+      el.addEventListener('click', function(){ sendCtaEvent(el); });
     });
-  </script>
+    if (window.TSE_DEBUG) { gtag('event', 'debug_ping', { debug_mode: true }); }
+  });
+</script>
+
 
   <!-- Schema.org Organization -->
   <script type="application/ld+json">
